@@ -21,9 +21,8 @@ void expAllOff(int n) {
 
 void expAllRandom(int n) {
     Train train;
-    srand_r(static_cast<unsigned int>(time(NULL)));
     while (n--)
-        train.addCar(rand() % 2);
+        train.addCar(rand_r(static_cast<unsigned int>(time(NULL))) % 2);
     train.getLength();
     std::cout << train.getOpCount() << " ";
 }

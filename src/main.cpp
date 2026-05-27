@@ -1,7 +1,7 @@
 // Copyright 2022 NNTU-CS
 #include <iostream>
-#include "train.h"
 #include <random>
+#include "train.h"
 
 void expAllOn(int n) {
     Train train;
@@ -21,7 +21,7 @@ void expAllOff(int n) {
 
 void expAllRandom(int n) {
     Train train;
-    srand(time(NULL));
+    srand_r(static_cast<unsigned int>(time(NULL)));
     while (n--)
         train.addCar(rand() % 2);
     train.getLength();
